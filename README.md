@@ -41,3 +41,6 @@ you can use the following js command:
 
 Buffer.from(payload.toLowerCase(), 'latin1').toString()
 
+## Why does it work?
+
+https://xenome.io/http-request-smuggling-via-unicode-payloads/
