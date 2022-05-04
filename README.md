@@ -29,15 +29,11 @@ is converted to:
 ```
 
 ## Result
-After payload is smuggled as a parameter to the server,
-Node < 8.x will not check for escape characters, and
-convert the payload to latin1 before sending the request.
+After payload is smuggled as a parameter to the server, Node < 8.x will not check for escape characters, and convert the payload to latin1 before sending the request.
 
-http module will think that it needs to send one more request
-and will send it to the server from the same server.
+http module will think that it needs to send one more request and will send it to the server from the same server.
 
-To check how an old Node.js server handles this payload,
-you can use the following js command:
+To check how an old Node.js server handles this payload, you can use the following js command:
 
 Buffer.from(payload.toLowerCase(), 'latin1').toString()
 
