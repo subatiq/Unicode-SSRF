@@ -35,7 +35,9 @@ http module will think that it needs to send one more request and will send it t
 
 To check how an old Node.js server handles this payload, you can use the following js command:
 
+```
 Buffer.from(payload.toLowerCase(), 'latin1').toString()
+```
 
 ## Why does it work?
 
